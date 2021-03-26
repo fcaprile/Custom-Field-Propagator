@@ -1,5 +1,5 @@
 # Custom-Field-Propagator
-This is my thesis's work, an user interface to simulate the propagation and focusing of a gaussian beam, after being modulated by a ohase mask.
+This is my thesis's work, an user interface that allows the simulation of the propagation and focusing of a gaussian beam, after being modulated by a ohase mask.
 
 To execute the interface run "main.py". Para interfase y figuras en español, correr "main_esp.py".
 
