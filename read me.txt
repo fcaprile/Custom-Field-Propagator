@@ -6,8 +6,6 @@ In case of simulating a custom phase mask, replace the function defined in "mask
 
 For circular polarization, the parameters are tan-1(ey/ex)=45, phase=90 for right polarization (which gives the minimal intensity at the center with the VPP) and phase=-90 for left polarization.
 
-For radial and azimutal polarizations (given by the mask 'polarization PP'), tan-1(ey/ex)=0 gives radial polarization and tan-1(ey/ex)=90 gives azimutal polarization.
-
 Saving the values matrix with the data for the intensity of the XZ and XY plane of the field near the focus is available at the lower part of the user interface. The coordinates are as ploted, with x going from -(radial field of view)/2 to (radial field of view)/2 on each column, and z going from (axial field of view)/2 to -(axial field of view)/2 on each row. The total number of rows and columns is given by the resolution, being the integer part of (radial field of view)/(radial resolution) for columns and of (axial field of view)/(axial resolution) for rows of the XZ plane.
 
 The only atypical packages used are tqdm and configparser, which serve as a waitbar and to save the .txt with the used parameters respectively. Other than these, one no other packages should need to be instaled.
@@ -15,7 +13,7 @@ The only atypical packages used are tqdm and configparser, which serve as a wait
 For custom mask integration, the phase mask's function must be modified at the 'maskfunction_goes_here.py' file. If the mask has real terms (wich mean that the amplitude changes), keep in mind that the simulation already has the term of a gaussian beam's amplitude: exp(-r^2/diam^2). 
 If instead of a function, a matrix with the values of the fase is to be used, at "main.py", lines 213 and 214 can be uncommented and lines 203 to 209 should be commented. The matrixes for the X and Y component of the incident field should have the values Ex[n_phi,n_theta] and Ey[n_phi,n_theta] (where phi,theta mean each position in the respective coordinate).
 
- For an example, the function 'generate_incident_field' in 'trapezoid2D_integration_functions.py' generates this matrixes given the pahse function, and thus can be usefull in understanding. Keep in mind that the integration for the calculus is made with equispaced divisions on the theta and phi coordinates, and thus the rho coordinate is not uniformly spaced.
+For an example, the function 'generate_incident_field' in 'trapezoid2D_integration_functions.py' generates this matrixes given the pahse function, and thus can be usefull in understanding. Keep in mind that the integration for the calculus is made with equispaced divisions on the theta and phi coordinates, and thus the rho coordinate is not uniformly spaced.
 
 A 2D trapezoid method was used for the numerical integration, the resolution of the calculation is given by the number of divisions, which can be modified in the script "main.py", lines 192 and 193. 
 

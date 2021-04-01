@@ -92,7 +92,7 @@ def plot_XZ_XY(ex1,ey1,ez1,ex2,ey2,ez2,zsteps,rsteps,field_of_view_x, field_of_v
     plt.rcParams['font.size']=14
     #ex
     fig2, ((ax_x1,ax_y1,ax_z1),(ax_x2,ax_y2,ax_z2)) = plt.subplots(figsize=(15, 8),nrows=2, ncols=3)
-    ax_x1.set_title('$|E_x|^2$')
+    ax_x1.set_title('$|E_{f_x}|^2$')
     pos_x1=ax_x1.imshow(np.abs(ex2)**2/Amp_max,extent=[-xmax,xmax,-xmax,xmax], interpolation='none', aspect='auto')
     ax_x1.set_xlabel('x (nm)')
     ax_x1.set_ylabel('y (nm)')
@@ -100,7 +100,7 @@ def plot_XZ_XY(ex1,ey1,ez1,ex2,ey2,ez2,zsteps,rsteps,field_of_view_x, field_of_v
     cbar_1_1=fig2.colorbar(pos_x1, ax=ax_x1)
     cbar_1_1.ax.set_ylabel('Relative intensity')
     
-    ax_x2.set_title('$E_x$ phase')
+    ax_x2.set_title('$E_{f_x}$ phase')
     pos_x2=ax_x2.imshow(np.angle(ex2, deg=True)+180,extent=[-xmax,xmax,-xmax,xmax], interpolation='none', aspect='auto')
     ax_x2.set_xlabel('x (nm)')
     ax_x2.set_ylabel('y (nm)')
@@ -109,7 +109,7 @@ def plot_XZ_XY(ex1,ey1,ez1,ex2,ey2,ez2,zsteps,rsteps,field_of_view_x, field_of_v
     cbar_1_1.ax.set_ylabel('Phase (º)')
 
     #ey
-    ax_y1.set_title('$|E_y|^2$')
+    ax_y1.set_title('$|E_{f_y}|^2$')
     pos_y1=ax_y1.imshow(np.abs(ey2)**2/Amp_max,extent=[-xmax,xmax,-xmax,xmax], interpolation='none', aspect='auto')
     ax_y1.set_xlabel('x (nm)')
     ax_y1.set_ylabel('y (nm)')
@@ -117,7 +117,7 @@ def plot_XZ_XY(ex1,ey1,ez1,ex2,ey2,ez2,zsteps,rsteps,field_of_view_x, field_of_v
     cbar_1_1=fig2.colorbar(pos_y1, ax=ax_y1)
     cbar_1_1.ax.set_ylabel('Relative intensity')
     
-    ax_y2.set_title('$E_y$ phase')
+    ax_y2.set_title('$E_{f_y}$ phase')
     pos_y2=ax_y2.imshow(np.angle(ey2, deg=True)+180,extent=[-xmax,xmax,-xmax,xmax], interpolation='none', aspect='auto')
     ax_y2.set_xlabel('x (nm)')
     ax_y2.set_ylabel('y (nm)')
@@ -126,7 +126,7 @@ def plot_XZ_XY(ex1,ey1,ez1,ex2,ey2,ez2,zsteps,rsteps,field_of_view_x, field_of_v
     cbar_1_1.ax.set_ylabel('Phase (º)')
 
     #ez
-    ax_z1.set_title('$|E_z|^2$')
+    ax_z1.set_title('$|E_{f_z}|^2$')
     pos_z1=ax_z1.imshow(np.abs(ez2)**2/Amp_max,extent=[-xmax,xmax,-xmax,xmax], interpolation='none', aspect='auto')
     ax_z1.set_xlabel('x (nm)')
     ax_z1.set_ylabel('y (nm)')
@@ -134,7 +134,7 @@ def plot_XZ_XY(ex1,ey1,ez1,ex2,ey2,ez2,zsteps,rsteps,field_of_view_x, field_of_v
     cbar_1_1=fig2.colorbar(pos_z1, ax=ax_z1)
     cbar_1_1.ax.set_ylabel('Relative intensity')
     
-    ax_z2.set_title('$E_z$ phase')
+    ax_z2.set_title('$E_{f_z}$ phase')
     pos_z2=ax_z2.imshow(np.angle(ez2, deg=True)+180,extent=[-xmax,xmax,-xmax,xmax], interpolation='none', aspect='auto')
     ax_z2.set_xlabel('x (nm)')
     ax_z2.set_ylabel('y (nm)')

@@ -352,14 +352,14 @@
     <widget class="QLabel" name="label_14">
      <property name="geometry">
       <rect>
-       <x>210</x>
+       <x>160</x>
        <y>80</y>
-       <width>91</width>
+       <width>131</width>
        <height>41</height>
       </rect>
      </property>
      <property name="text">
-      <string>Laser radius (mm)</string>
+      <string>Gaussian beam radius (mm)</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_16">

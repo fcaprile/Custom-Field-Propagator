@@ -248,7 +248,7 @@
     <widget class="QLineEdit" name="lineEdit_3">
      <property name="geometry">
       <rect>
-       <x>300</x>
+       <x>310</x>
        <y>30</y>
        <width>41</width>
        <height>20</height>
@@ -313,7 +313,7 @@
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>160</x>
+       <x>170</x>
        <y>30</y>
        <width>141</width>
        <height>20</height>
@@ -326,7 +326,7 @@
     <widget class="QLineEdit" name="lineEdit_15">
      <property name="geometry">
       <rect>
-       <x>300</x>
+       <x>310</x>
        <y>60</y>
        <width>41</width>
        <height>20</height>
@@ -339,9 +339,9 @@
     <widget class="QLabel" name="label_10">
      <property name="geometry">
       <rect>
-       <x>190</x>
+       <x>200</x>
        <y>50</y>
-       <width>131</width>
+       <width>111</width>
        <height>41</height>
       </rect>
      </property>
@@ -352,20 +352,20 @@
     <widget class="QLabel" name="label_14">
      <property name="geometry">
       <rect>
-       <x>200</x>
+       <x>160</x>
        <y>80</y>
-       <width>101</width>
+       <width>151</width>
        <height>41</height>
       </rect>
      </property>
      <property name="text">
-      <string>Radio del laser (mm)</string>
+      <string>Radio del haz gaussiano (mm)</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_16">
      <property name="geometry">
       <rect>
-       <x>300</x>
+       <x>310</x>
        <y>90</y>
        <width>41</width>
        <height>20</height>
@@ -378,7 +378,7 @@
     <widget class="QLineEdit" name="lineEdit_18">
      <property name="geometry">
       <rect>
-       <x>300</x>
+       <x>310</x>
        <y>120</y>
        <width>41</width>
        <height>20</height>
@@ -391,14 +391,14 @@
     <widget class="QLabel" name="label_17">
      <property name="geometry">
       <rect>
-       <x>170</x>
+       <x>190</x>
        <y>120</y>
-       <width>141</width>
+       <width>121</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>Apertura de la lente (mm)</string>
+      <string>Radio de apertura (mm)</string>
      </property>
     </widget>
     <widget class="QGroupBox" name="groupBox_3">
