@@ -61,7 +61,7 @@
      <rect>
       <x>420</x>
       <y>190</y>
-      <width>161</width>
+      <width>141</width>
       <height>22</height>
      </rect>
     </property>
@@ -76,12 +76,12 @@
     </property>
     <item>
      <property name="text">
-      <string>VPP (0-2pi)</string>
+      <string>VPP (helicoidal 0-2pi)</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Nula (haz gaussiano enfocado)</string>
+      <string>Nula (haz gaussiano)</string>
      </property>
     </item>
     <item>
@@ -605,7 +605,7 @@
      <rect>
       <x>420</x>
       <y>220</y>
-      <width>161</width>
+      <width>141</width>
       <height>20</height>
      </rect>
     </property>

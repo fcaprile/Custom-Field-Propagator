@@ -61,7 +61,7 @@
      <rect>
       <x>360</x>
       <y>190</y>
-      <width>101</width>
+      <width>121</width>
       <height>22</height>
      </rect>
     </property>
@@ -76,7 +76,7 @@
     </property>
     <item>
      <property name="text">
-      <string>VPP (0-2pi)</string>
+      <string>VPP (Vortical 0-2pi)</string>
      </property>
     </item>
     <item>
