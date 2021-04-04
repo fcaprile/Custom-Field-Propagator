@@ -25,7 +25,7 @@ def plot_XZ_XY(ex1,ey1,ez1,ex2,ey2,ez2,zsteps,rsteps,field_of_view_x, field_of_v
     fig = plt.figure(num=str(figure_name)+': Intensidad',figsize=(16, 8))
     spec = fig.add_gridspec(ncols=3, nrows=2)
     ax1 = fig.add_subplot(spec[0, 0])
-    ax1.set_title('Intensidad en y=0')
+    ax1.set_title('Intensidad en plano XZ')
     pos=ax1.imshow(Ifield_xz,extent=[-rmax,rmax,-zmax,zmax], interpolation='none', aspect='equal')
     ax1.set_xlabel('x (nm)')
     ax1.set_ylabel('z (nm)')
@@ -41,7 +41,7 @@ def plot_XZ_XY(ex1,ey1,ez1,ex2,ey2,ez2,zsteps,rsteps,field_of_view_x, field_of_v
 
     xmax=field_of_view_x/2
     ax2 = fig.add_subplot(spec[0, 1])
-    ax2.set_title('Intensidad en z=0')
+    ax2.set_title('Intensidad en plano XY')
     pos2=ax2.imshow(Ifield_xy,extent=[-xmax,xmax,-xmax,xmax],interpolation='none', aspect='auto')
     cbar2=fig.colorbar(pos2, ax=ax2)
     ax2.set_xlabel('x (nm)')
@@ -53,13 +53,13 @@ def plot_XZ_XY(ex1,ey1,ez1,ex2,ey2,ez2,zsteps,rsteps,field_of_view_x, field_of_v
     Ifield_axis=Ifield_xy[int(x2/2),:]
     axis=np.linspace(-xmax,xmax,x2)
     ax3 = fig.add_subplot(spec[0, 2])
-    ax3.set_title('Intensidad en z=0, y=0')
+    ax3.set_title('Intensidad en eje X')
     ax3.plot(axis,Ifield_axis)
     ax3.set_xlabel('x (nm)')
     ax3.set_ylabel('Intensidad  (kW/cm\u00b2)')  
     
     ax4 = fig.add_subplot(spec[1, 1])
-    ax4.set_title('Polarización en z=0')
+    ax4.set_title('Polarización en plano XY')
     pos4=ax4.imshow(Ifield_xy,extent=[-xmax,xmax,-xmax,xmax],interpolation='none', aspect='auto',alpha=0.5)
     cbar4=fig.colorbar(pos4, ax=ax4)
     cbar4.ax.set_ylabel('Intensidad (kW/cm\u00b2)')

@@ -100,8 +100,8 @@ def VPP_fields(II1,II2,II3,II4,II5,lambda1,I0,beta,polarization,zsteps,rsteps,fi
     for xx in range(x2):
         for yy in range(y2):
             xcord=xx - np.rint(2*rtotalsteps /2**0.5)/2#not sure of multipliing by 2 and dividing by 2 outside the int, i thought it was to be sure to get the 0,0 at xx=np.rint(2*rtotalsteps /np.sqrt(2))/2
-            ycord=yy - np.rint(2*rtotalsteps /2**0.5)/2
-            phip,rp=cart2pol(xcord+1,ycord+1)#nuevamente el +1 es para no tener problemas
+            ycord=-yy + np.rint(2*rtotalsteps /2**0.5)/2-1
+            phip,rp=cart2pol(xcord,ycord)#nuevamente el +1 es para no tener problemas
             rp=int(np.rint(rp))
             exx2[yy,xx]=a1*(II1[zz,rp]*np.exp(1j*phip) - 0.5*II2[zz,rp]*np.exp(-1j*phip) + 0.5*II3[zz,rp]*np.exp(3j*phip))
             eyx2[yy,xx]=- 0.5*a1*1j*(II2[zz,rp]*np.exp(- 1j*phip) + II3[zz,rp]*np.exp(3j*phip))

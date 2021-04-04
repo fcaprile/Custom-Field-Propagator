@@ -87,9 +87,9 @@ def no_mask_fields(II1,II2,II3,lambda1,I0,beta,polarization,zsteps,rsteps,field_
     zz=ztotalsteps + int(np.rint(zp0/z_field_of_view*2*ztotalsteps))  #zz signals to the row of kz=kz0 in each II
     for xx in range(x2):
         for yy in range(y2):
-            xcord=xx - np.rint(2*rtotalsteps /np.sqrt(2))/2#not sure of multipliing by 2 and dividing by 2 outside the int, i thought it was to be sure to get the 0,0 at xx=np.rint(2*rtotalsteps /np.sqrt(2))/2
-            ycord=yy - np.rint(2*rtotalsteps /np.sqrt(2))/2
-            phip,rp=cart2pol(xcord+1,ycord+1)
+            xcord=xx - np.rint(2*rtotalsteps /2**0.5)/2#not sure of multipliing by 2 and dividing by 2 outside the int, i thought it was to be sure to get the 0,0 at xx=np.rint(2*rtotalsteps /np.sqrt(2))/2
+            ycord=-yy + np.rint(2*rtotalsteps /2**0.5)/2-1
+            phip,rp=cart2pol(xcord,ycord)#nuevamente el +1 es para no tener problemas
             rp=int(np.rint(rp))
             exx2[yy,xx]=-a1*1j*(II1[zz,rp]+np.cos(2*phip)*II3[zz,rp])
             eyx2[yy,xx]=-a1*1j*(np.sin(2*phip)*II3[zz,rp])
