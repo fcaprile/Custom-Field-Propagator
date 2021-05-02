@@ -142,7 +142,7 @@ def plot_XZ_XY(ex1,ey1,ez1,ex2,ey2,ez2,zsteps,rsteps,field_of_view_x, field_of_v
     cbar_1_1=fig2.colorbar(pos_z2, ax=ax_z2,ticks=[5, 90,180,270,355])
     cbar_1_1.ax.set_ylabel('Fase (º)')
     fig2.tight_layout()
-    
+   
     '''
     Si se quiere guardar las imágenes en alta resolución:
     fig.savefig('Intensidad.png',dpi=100)

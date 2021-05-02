@@ -265,23 +265,15 @@ def custom_mask_focus_field(ex_lens,ey_lens,alpha,h,Lambda,zp0,resolution_focus,
     Lambda*=10**6
     focus=h/np.sin(alpha)*10**6
         
-    #The X component of incident field must be evaluated at phi-pi, which is equivalent to moving the rows of the matrix    
-    def rotate_180º(matrix):
-        a,b=np.shape(matrix)       
-        aux=np.zeros((a,b),dtype=complex)        
-        for i in range(a):
-            aux[i-int(a/2),:]=matrix[i,:]
-        return aux
     #The Y component of incident field must be evaluated at phi-pi-pi/2, which is equivalent to moving the rows of the matrix    
-    def rotate_270º(matrix):
+    def rotate_90º(matrix):
         a,b=np.shape(matrix)       
         aux=np.zeros((a,b),dtype=complex)        
         for i in range(a):
             aux[i-int(3*a/4),:]=matrix[i,:]
         return aux
 
-    ex_lens=rotate_180º(ex_lens)        
-    ey_lens=rotate_270º(ey_lens)
+    ey_lens=rotate_90º(ey_lens)
     
     '''
     # the functions i am going to integrate are:
@@ -393,23 +385,15 @@ def custom_mask_focus_field_XZ_XY(ex_lens,ey_lens,alpha,h,Lambda,z_FOV,resolutio
     Lambda*=10**6               #passage from mm to nm
     focus=h/np.sin(alpha)*10**6 #passage from mm to nm
         
-    #The X component of incident field must be evaluated at phi-pi, which is equivalent to moving the rows of the matrix    
-    def rotate_180º(matrix):
-        a,b=np.shape(matrix)       
-        aux=np.zeros((a,b),dtype=complex)        
-        for i in range(a):
-            aux[i-int(a/2),:]=matrix[i,:]
-        return aux
-    #The Y component of incident field must be evaluated at phi-pi-pi/2, which is equivalent to moving the rows of the matrix    
-    def rotate_270º(matrix):
+    #The Y component of incident field must be evaluated at phi-pi/2, which is equivalent to moving the rows of the matrix    
+    def rotate_90º(matrix):
         a,b=np.shape(matrix)       
         aux=np.zeros((a,b),dtype=complex)        
         for i in range(a):
             aux[i-int(3*a/4),:]=matrix[i,:]
         return aux
 
-    ex_lens=rotate_180º(ex_lens)        
-    ey_lens=rotate_270º(ey_lens)
+    ey_lens=rotate_90º(ey_lens)
 
     '''
     # the functions i am going to integrate are:
